@@ -1,0 +1,60 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block extrahead %}
+{{ block.super }}
+<style>
+    .export-form {
+        margin: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .form-row {
+        margin-bottom: 15px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+    .submit-row {
+        margin-top: 20px;
+    }
+    .submit-row input {
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; <a href="{% url 'admin:listings_comment_changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+&rsaquo; {% translate 'Export JSON' %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="export-form">
+    <h2>{% translate 'Export to JSON File' %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-row">
+            <label for="file_name">{% translate 'File Name:' %}</label>
+            <input type="text" name="file_name" id="file_name" value="export.json" required>
+        </div>
+        <div class="submit-row">
+            <input type="submit" value="{% translate 'Export' %}" />
+            <a href="{% url 'admin:listings_comment_changelist' %}" class="button cancel-link">{% translate 'Cancel' %}</a>
+        </div>
+    </form>
+</div>
+{% endblock %} 

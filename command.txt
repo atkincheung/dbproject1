@@ -1,0 +1,4 @@
+python manage.py manage_listings --action import --file comments3copy.json
+python manage.py manage_listings --action export --file export.json
+python manage.py manage_listings --action format
+python manage.py manage_listings --action data_clean

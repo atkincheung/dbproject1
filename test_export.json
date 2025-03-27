@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "body": "kkk",
+    "postId": 1,
+    "likes": 1,
+    "user": {
+      "id": 1,
+      "username": "atkincheung@yahoo.com.hk",
+      "fullName": "0"
+    }
+  }
+]
