@@ -40,6 +40,7 @@ INSTALLED_APPS = [
      "debug_toolbar",
     'listings',
     'contact1s',
+    'posts'
 ]
 
 MIDDLEWARE = [

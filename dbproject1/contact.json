@@ -1,11 +1,6 @@
 {
   "contacts": [
     {
-      "username": "user1",
-      "first_name": "John",
-      "email": "john@example.com"
-    },
-    {
       "id": 1,
       "username": "jsmith84",
       "first_name": "John",
