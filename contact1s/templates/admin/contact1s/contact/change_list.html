@@ -1,0 +1,26 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_urls %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    <li>
+        <a href="/admin/contact1s/contact/import-json/" class="addlink" style="background-color: #79aec8;">
+            Import JSON
+        </a>
+    </li>
+    <li>
+        <a href="/admin/contact1s/contact/export-json/" class="addlink" style="background-color: #79aec8;">
+            Export JSON
+        </a>
+    </li>
+    <li>
+        <a href="/admin/contact1s/contact/format-data/" class="addlink" style="background-color: #79aec8;">
+            Format
+        </a>
+    </li>
+    <li>
+        <a href="/admin/contact1s/contact/clean-data/" class="addlink" style="background-color: #79aec8;">
+            Clean Data
+        </a>
+    </li>
+{% endblock %} 

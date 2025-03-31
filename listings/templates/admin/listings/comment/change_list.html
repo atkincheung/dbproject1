@@ -4,22 +4,22 @@
 {% block object-tools-items %}
     {{ block.super }}
     <li>
-        <a href="{% url 'admin:import-json' %}" class="addlink" style="background-color: #79aec8;">
-            Import JSON File
+        <a href="/admin/listings/comment/import-json/" class="addlink" style="background-color: #79aec8;">
+            Import JSON
         </a>
     </li>
     <li>
-        <a href="{% url 'admin:export-json' %}" class="addlink" style="background-color: #79aec8;">
-            Export JSON File
+        <a href="/admin/listings/comment/export-json/" class="addlink" style="background-color: #79aec8;">
+            Export JSON
         </a>
     </li>
     <li>
-        <a href="{% url 'admin:format-data' %}" class="addlink" style="background-color: #ba2121;">
-            Format Data
+        <a href="/admin/listings/comment/format-data/" class="addlink" style="background-color: #79aec8;">
+            Format
         </a>
     </li>
     <li>
-        <a href="{% url 'admin:clean-data' %}" class="addlink" style="background-color:rgb(33, 186, 145);">
+        <a href="/admin/listings/comment/clean-data/" class="addlink" style="background-color: #79aec8;">
             Clean Data
         </a>
     </li>
